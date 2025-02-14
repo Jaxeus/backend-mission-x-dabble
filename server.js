@@ -3,8 +3,10 @@ const express = require('express');
 require('dotenv').config();
 // Get the client
 const mysql = require('mysql2');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 
 // ===== CONNECTING TO THE DATABASE ===== //
 const pool = mysql.createPool({
